@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("http://localhost:5000", {
+			const socket = io("https://wetalk-chat-app.onrender.com/", { // initial value was localhost:5000 (backend server)
 				query: {
 					userId: authUser._id,
 				},
