@@ -25,7 +25,7 @@ app.use("/api/users", userRoutes);
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-app.get("*", (req, res) => {
+app.get("*", (req, res) => { // this means that any route except the mentioned one just render index.html
 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
